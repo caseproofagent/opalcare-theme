@@ -7,7 +7,7 @@ Description: A simple block theme for opalcarewp.com in Opal's pen-and-watercolo
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.0
-Version: 1.1.0
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: opal-care
@@ -344,3 +344,4 @@ body {
 	.opal-readiness__button { width: 100%; }
 	.opal-readiness__out:not(:empty) { padding: 1.25rem; }
 }
+.opal-readiness__out .opal-readiness__offer { margin-top: 1.5rem; }
