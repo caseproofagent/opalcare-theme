@@ -104,7 +104,7 @@ body {
 	background: #fff;
 	box-shadow: 0 30px 60px -30px rgba(31, 36, 48, 0.35);
 }
-.opal-phone__screen { border-radius: 1.9rem; overflow: hidden; background: var(--wp--preset--color--wash); }
+.opal-phone__screen { border-radius: 1.9rem; overflow: hidden; background: var(--wp--preset--color--paper-2); }
 .opal-phone__top {
 	display: flex;
 	align-items: center;
@@ -133,7 +133,7 @@ body {
 }
 .opal-bubble--you {
 	justify-self: end;
-	background: var(--wp--preset--color--teal);
+	background: var(--wp--preset--color--ink);
 	color: #fff;
 	border-bottom-right-radius: 0.25rem;
 }
@@ -149,11 +149,11 @@ body {
 	position: absolute;
 	inset-inline-start: 0;
 	font-weight: 700;
-	color: var(--wp--preset--color--teal);
+	color: var(--wp--preset--color--ink);
 }
 .opal-bubble--opal li.is-look::before { content: "!"; color: var(--wp--preset--color--accent); }
-.opal-note { font-family: var(--wp--preset--font-family--serif); font-style: italic; }
-.opal-note small { display: block; font-family: var(--wp--preset--font-family--sans); font-style: normal; color: var(--wp--preset--color--muted); margin-top: 0.4rem; }
+.opal-note { font-family: var(--wp--preset--font-family--serif); font-style: italic; font-size: var(--wp--preset--font-size--large); margin-block: 0 1.75rem; text-wrap: balance; }
+.opal-note small { display: block; font-family: var(--wp--preset--font-family--sans); font-style: normal; font-size: var(--wp--preset--font-size--medium); color: var(--wp--preset--color--muted); margin-top: 0.4rem; }
 
 /* Questions owners bring her */
 .opal-questions {
@@ -203,3 +203,16 @@ body {
 	.opal-questions > p:nth-last-child(2) { border-bottom: 2px solid var(--wp--preset--color--ink); }
 	.opal-section { padding-block: 3.5rem !important; }
 }
+
+/* Tap targets: 44px on touch, with no visible change */
+.opal-footer a,
+.opal-header .wp-block-site-title a,
+.wp-block-post-title a { display: inline-block; min-height: 44px; line-height: 44px; }
+.wp-block-post-title a { line-height: 1.2; padding-block: 0.6rem; }
+.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.opal-footer .wp-block-group { gap: 0.25rem 1.5rem; }
+
+/* The search box matches the paper cards */
+.wp-block-search__input { background: var(--wp--preset--color--paper-2); border: 2px solid var(--wp--preset--color--ink); border-radius: 6px; padding: 0.7rem 1rem; font: inherit; color: var(--wp--preset--color--ink); }
+.wp-block-search__button { background: var(--wp--preset--color--ink); color: var(--wp--preset--color--paper); border: 2px solid var(--wp--preset--color--ink); border-radius: 6px; padding: 0.7rem 1.25rem; font: inherit; font-weight: 700; }

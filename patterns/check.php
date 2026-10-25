@@ -23,14 +23,18 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:columns {"align":"wide","verticalAlignment":"center"} -->
-<div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"className":"opal-note"} -->
+<div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"45%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%"><!-- wp:paragraph {"className":"opal-note"} -->
 <p class="opal-note">She reads your whole site.<small>Pages, links, security, speed. Then she writes it down for a person.</small></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"opal-note"} -->
+<p class="opal-note">Nothing changes until you say so.<small>She asks first, every time, then tells you what she did.</small></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"center","width":"390px"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:390px"><!-- wp:group {"className":"opal-phone"} -->
+<!-- wp:column {"verticalAlignment":"center","width":"55%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%"><!-- wp:group {"className":"opal-phone"} -->
 <div class="wp-block-group opal-phone"><!-- wp:group {"className":"opal-phone__screen"} -->
 <div class="wp-block-group opal-phone__screen"><!-- wp:group {"className":"opal-phone__top"} -->
 <div class="wp-block-group opal-phone__top"><!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none"} -->
@@ -89,12 +93,6 @@
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"verticalAlignment":"center"} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"className":"opal-note"} -->
-<p class="opal-note">Nothing changes until you say so.<small>She asks first, every time, then tells you what she did.</small></p>
-<!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
