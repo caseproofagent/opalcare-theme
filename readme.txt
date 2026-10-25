@@ -3,7 +3,7 @@ Contributors: caseproofagent
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,9 @@ This theme bundles the following resources:
 * Opal illustration (assets/images/opal.webp) and paper texture (assets/images/paper.webp), (C) Caseproof, LLC, from Opal's style guide. Distributed under the GNU General Public License v2 or later with this theme.
 
 == Changelog ==
+
+= 1.0.5 =
+* The logo link is a 44px tap target.
 
 = 1.0.4 =
 * The favicon is the still opal with its ink outline; the mobile menu button is 44px.
