@@ -66,7 +66,7 @@ function opalcare_seed_page( $slug, $title, $content, $template = '' ) {
 }
 
 $dir  = dirname( __DIR__ ) . '/content/';
-$home = implode( "\n\n", array_map( 'opalcare_seed_pattern', array( 'opalcare/hero', 'opalcare/check', 'opalcare/questions', 'opalcare/close' ) ) );
+$home = implode( "\n\n", array_map( 'opalcare_seed_pattern', array( 'opalcare/hero', 'opalcare/check', 'opalcare/questions', 'opalcare/readiness', 'opalcare/close' ) ) );
 
 $home_id = opalcare_seed_page( 'home', 'Home', $home, 'page-landing' );
 opalcare_seed_page( 'how-it-works', 'How it works', file_get_contents( $dir . 'how-it-works.html' ) );

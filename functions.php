@@ -86,3 +86,11 @@ function opalcare_animated_logo( $content ) {
 	return preg_replace( '/<img\b[^>]*>/', $svg, $content, 1 );
 }
 add_filter( 'render_block_core/site-logo', 'opalcare_animated_logo' );
+
+/**
+ * Registers the AI readiness check block (blocks/readiness-check). It needs no build step.
+ */
+function opalcare_register_blocks() {
+	register_block_type( get_theme_file_path( 'blocks/readiness-check' ) );
+}
+add_action( 'init', 'opalcare_register_blocks' );

@@ -3,7 +3,7 @@ Contributors: caseproofagent
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.6
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,10 @@ Home, a page, the blog, a post, search and the 404 page each have their own temp
 
 To add the starter pages (Home, How it works, Pricing, Privacy, Terms, Contact) and the menu, run `wp eval-file wp-content/themes/opal-care/bin/seed.php` on the site. It can be run again safely.
 
+== External services ==
+
+The AI readiness check block (blocks/readiness-check) sends the website address a visitor types to Opal Care's free check at https://opalagent.app/api/readiness, only when the visitor presses "Check my site". Opal Care reads that site's robots.txt, sitemap, title and description, security headers, certificate and speed, and answers with the report. It keeps one count of checks per day and does not store the address. Terms: https://opalagent.app/terms/. Privacy: https://opalagent.app/privacy/. Nothing is sent until the visitor presses the button, and the block is only on pages where it is placed.
+
 == Copyright ==
 
 Opal Care WordPress Theme, (C) 2026 Caseproof, LLC.
@@ -29,6 +33,9 @@ This theme bundles the following resources:
 * Opal illustration (assets/images/opal.webp) and paper texture (assets/images/paper.webp), (C) Caseproof, LLC, from Opal's style guide. Distributed under the GNU General Public License v2 or later with this theme.
 
 == Changelog ==
+
+= 1.1.0 =
+* The AI readiness check block, and a Home section that uses it.
 
 = 1.0.6 =
 * The 44px menu button applies on phones only; the desktop menu stays on the logo row.

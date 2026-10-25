@@ -7,7 +7,7 @@ Description: A simple block theme for opalcarewp.com in Opal's pen-and-watercolo
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.0
-Version: 1.0.6
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: opal-care
@@ -268,3 +268,79 @@ body {
 	.wp-block-navigation .wp-block-navigation__responsive-container-open { min-width: 44px; min-height: 44px; padding: 10px; box-sizing: border-box; align-items: center; justify-content: center; }
 }
 .wp-block-site-logo .custom-logo-link { display: flex; align-items: center; min-height: 44px; }
+
+/* The AI readiness check block */
+.opal-readiness { max-width: 46rem; }
+.opal-readiness__label { display: block; font-weight: 700; margin-bottom: 0.5rem; }
+.opal-readiness__row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.opal-readiness__input {
+	flex: 1 1 16rem;
+	min-height: 52px;
+	padding: 0.7rem 1rem;
+	font: inherit;
+	color: var(--wp--preset--color--ink);
+	background: var(--wp--preset--color--paper-2);
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 6px;
+}
+.opal-readiness__button {
+	min-height: 52px;
+	padding: 0.7rem 1.5rem;
+	font: inherit;
+	font-weight: 700;
+	color: #fff;
+	background: var(--wp--preset--color--accent);
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 6px;
+	box-shadow: 5px 5px 0 var(--wp--preset--color--ink);
+	cursor: pointer;
+}
+.opal-readiness__button:disabled { opacity: 0.7; cursor: progress; }
+.opal-readiness__note { font-size: var(--wp--preset--font-size--small); color: var(--wp--preset--color--muted); margin-block: 0.75rem 0; }
+.opal-readiness__out { margin-top: 1.5rem; outline: none; }
+.opal-readiness__out:empty { display: none; }
+.opal-readiness__out > * { margin-block: 0 1.25rem; }
+.opal-readiness__out:not(:empty) {
+	padding: 1.75rem 2rem;
+	background: var(--wp--preset--color--paper-2);
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 6px;
+	box-shadow: 8px 8px 0 rgba(31, 36, 48, 0.18);
+}
+.opal-readiness__title { font-size: var(--wp--preset--font-size--large); }
+.opal-readiness__items { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
+.opal-readiness__item { display: grid; grid-template-columns: 2rem 1fr; gap: 0.75rem; align-items: start; }
+.opal-readiness__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.75rem;
+	height: 1.75rem;
+	border: 2px solid currentColor;
+	border-radius: 50%;
+	font-weight: 700;
+	font-size: 0.95rem;
+	line-height: 1;
+}
+.opal-readiness__item.is-pass .opal-readiness__icon { color: var(--wp--preset--color--ink); }
+.opal-readiness__item.is-fail .opal-readiness__icon { color: var(--wp--preset--color--accent); }
+.opal-readiness__item.is-info .opal-readiness__icon,
+.opal-readiness__item.is-unavailable .opal-readiness__icon { color: var(--wp--preset--color--muted); }
+.opal-readiness__text strong { display: block; }
+.opal-readiness__line { display: block; font-size: 1rem; }
+.opal-readiness__offer { padding-top: 1.25rem; border-top: 2px solid var(--wp--preset--color--ink); }
+.opal-readiness__cta {
+	display: inline-block;
+	padding: 0.9rem 1.5rem;
+	color: #fff;
+	background: var(--wp--preset--color--accent);
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 6px;
+	box-shadow: 5px 5px 0 var(--wp--preset--color--ink);
+	font-weight: 700;
+	text-decoration: none;
+}
+@media (max-width: 781px) {
+	.opal-readiness__button { width: 100%; }
+	.opal-readiness__out:not(:empty) { padding: 1.25rem; }
+}

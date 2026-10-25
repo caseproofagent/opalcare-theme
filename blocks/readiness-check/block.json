@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "opalcare/readiness-check",
+	"title": "AI readiness check",
+	"category": "widgets",
+	"icon": "search",
+	"description": "A visitor types the address of a site and gets Opal's short report on whether AI can find and read it.",
+	"keywords": [ "ai", "check", "seo", "robots", "sitemap" ],
+	"textdomain": "opal-care",
+	"supports": {
+		"autoRegister": true,
+		"html": false,
+		"align": [ "wide" ],
+		"spacing": { "margin": true }
+	},
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
