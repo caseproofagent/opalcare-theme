@@ -10,17 +10,19 @@
 
 ?>
 <!-- wp:group {"align":"full","anchor":"check","className":"opal-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","wideSize":"70rem"}} -->
-<div id="check" class="wp-block-group alignfull opal-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:paragraph {"align":"wide","className":"opal-step"} -->
-<p class="alignwide opal-step">1</p>
+<div id="check" class="wp-block-group alignfull opal-section" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:group {"align":"wide","className":"opal-head"} -->
+<div class="wp-block-group alignwide opal-head"><!-- wp:paragraph {"className":"opal-step"} -->
+<p class="opal-step">1</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"align":"wide"} -->
-<h2 class="wp-block-heading alignwide">Ask her anything about your site.</h2>
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Ask her anything about your site.</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"wide","textColor":"muted"} -->
-<p class="alignwide has-muted-color has-text-color">This is a real check she ran on a test site. She read the whole thing, then wrote it down for a person.</p>
-<!-- /wp:paragraph -->
+<!-- wp:paragraph {"textColor":"muted"} -->
+<p class="has-muted-color has-text-color">This is a real check she ran on a test site. She read the whole thing, then wrote it down for a person.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
 
 <!-- wp:columns {"align":"wide","verticalAlignment":"center"} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"45%"} -->
