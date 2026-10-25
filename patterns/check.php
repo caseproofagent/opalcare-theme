@@ -5,7 +5,7 @@
  * Categories: opalcare
  * Description: One real conversation with Opal, in a phone frame.
  *
- * @package opalcare
+ * @package opal-care
  */
 
 ?>
@@ -34,7 +34,7 @@
 <div class="wp-block-group opal-phone"><!-- wp:group {"className":"opal-phone__screen"} -->
 <div class="wp-block-group opal-phone__screen"><!-- wp:group {"className":"opal-phone__top"} -->
 <div class="wp-block-group opal-phone__top"><!-- wp:image {"sizeSlug":"thumbnail","linkDestination":"none"} -->
-<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/opal.webp' ) ); ?>" alt="Opal"/></figure>
+<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/opal-avatar.webp' ) ); ?>" width="128" height="128" alt="Opal"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->

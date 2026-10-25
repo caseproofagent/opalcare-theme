@@ -5,7 +5,7 @@
  * Categories: opalcare
  * Description: The promise, one button, and Opal.
  *
- * @package opalcare
+ * @package opal-care
  */
 
 ?>
@@ -37,7 +37,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"opal-plate"} -->
-<figure class="wp-block-image size-large opal-plate"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/opal.webp' ) ); ?>" alt="Opal, holding her notebook, looking up with a small smile"/><figcaption class="wp-element-caption">Opal keeps a notebook on every site she looks after.</figcaption></figure>
+<figure class="wp-block-image size-large opal-plate"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/opal-640.webp' ) ); ?>" srcset="<?php echo esc_url( get_theme_file_uri( 'assets/images/opal-640.webp' ) ); ?> 640w, <?php echo esc_url( get_theme_file_uri( 'assets/images/opal.webp' ) ); ?> 1024w" sizes="(max-width: 781px) 100vw, 480px" width="640" height="640" fetchpriority="high" alt="Opal, holding her notebook, looking up with a small smile"/><figcaption class="wp-element-caption">Opal keeps a notebook on every site she looks after.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

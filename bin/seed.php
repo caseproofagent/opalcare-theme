@@ -5,14 +5,14 @@
  * Safe to run again: pages are found by slug and updated, nothing is duplicated.
  * The Home page is the four home patterns joined; the other pages come from content/*.html.
  *
- * @package opalcare
+ * @package opal-care
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit( 1 );
 }
 
-if ( 'opalcare' !== get_stylesheet() ) {
+if ( 'opal-care' !== get_stylesheet() ) {
 	WP_CLI::error( 'Activate the opalcare theme first.' );
 }
 
@@ -76,7 +76,7 @@ opalcare_seed_page( 'contact', 'Contact', file_get_contents( $dir . 'contact.htm
 update_option( 'show_on_front', 'page' );
 update_option( 'page_on_front', $home_id );
 update_option( 'wp_page_for_privacy_policy', $privacy_id );
-update_option( 'blogdescription', 'Opal looks after your WordPress site.' );
+update_option( 'blogdescription', 'Opal looks after your WordPress site every day and tells you in plain words what she found.' );
 
 $sample = get_page_by_path( 'sample-page' );
 if ( $sample ) {

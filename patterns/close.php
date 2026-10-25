@@ -5,7 +5,7 @@
  * Categories: opalcare
  * Description: A dark band with one last button.
  *
- * @package opalcare
+ * @package opal-care
  */
 
 ?>

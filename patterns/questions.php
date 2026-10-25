@@ -5,7 +5,7 @@
  * Categories: opalcare
  * Description: Four questions in a ruled box.
  *
- * @package opalcare
+ * @package opal-care
  */
 
 ?>

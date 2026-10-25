@@ -10,8 +10,8 @@ Requires PHP: 8.0
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: opalcare
-Tags: blog, one-column, full-site-editing, block-patterns, custom-colors, editor-style, accessibility-ready, wide-blocks
+Text Domain: opal-care
+Tags: blog, one-column, full-site-editing, block-patterns, custom-colors, editor-style, wide-blocks
 */
 
 /* Paper, ink and hard-edged shadows: the look in a few rules. Colours, fonts and spaces come from theme.json. */
@@ -118,7 +118,6 @@ body {
 	height: 44px;
 	border-radius: 50%;
 	object-fit: cover;
-	object-position: 46% 22%;
 	border: 1.5px solid var(--wp--preset--color--ink);
 }
 .opal-phone__top p { margin: 0; line-height: 1.25; font-size: 0.8125rem; color: var(--wp--preset--color--muted); }
