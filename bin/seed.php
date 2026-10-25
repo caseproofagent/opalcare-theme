@@ -136,7 +136,7 @@ if ( ! get_option( 'site_logo' ) ) {
 	require_once ABSPATH . 'wp-admin/includes/media.php';
 	require_once ABSPATH . 'wp-admin/includes/file.php';
 	require_once ABSPATH . 'wp-admin/includes/image.php';
-	$logo_id = media_sideload_image( get_theme_file_uri( 'assets/images/opal-stone-512.png' ), 0, 'Opal Care', 'id' );
+	$logo_id = media_sideload_image( get_theme_file_uri( 'assets/images/opal-stone-still.png' ), 0, 'Opal Care', 'id' );
 	if ( is_wp_error( $logo_id ) ) {
 		WP_CLI::warning( 'Logo not imported: ' . $logo_id->get_error_message() );
 	} else {
