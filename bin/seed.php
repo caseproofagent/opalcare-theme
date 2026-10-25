@@ -27,7 +27,9 @@ function opalcare_seed_pattern( $slug ) {
 	if ( ! $pattern ) {
 		WP_CLI::error( "Pattern $slug is not registered." );
 	}
-	return $pattern['content'];
+	// WP-CLI does not see the proxy's https, so give the theme's URLs the scheme the site is served on.
+	$root = get_theme_root_uri();
+	return str_replace( $root, set_url_scheme( $root, wp_parse_url( home_url(), PHP_URL_SCHEME ) ), $pattern['content'] );
 }
 
 /**
