@@ -129,8 +129,9 @@ if ( $existing_nav ) {
 	wp_insert_post( $nav_args );
 }
 
-// The logo: the opal stone, imported once from the theme and set as both the Site Logo (the header) and the Site Icon
-// (the favicon), so Opal can swap either from the editor later.
+// The logo: the still opal stone, imported once from the theme and set as both the Site Logo and the Site Icon (the
+// favicon). While the Site Logo is this image, the theme draws the animated opal in its place (functions.php);
+// Opal can swap either from the editor, and her image then shows.
 if ( ! get_option( 'site_logo' ) ) {
 	require_once ABSPATH . 'wp-admin/includes/media.php';
 	require_once ABSPATH . 'wp-admin/includes/file.php';
@@ -140,6 +141,7 @@ if ( ! get_option( 'site_logo' ) ) {
 		WP_CLI::warning( 'Logo not imported: ' . $logo_id->get_error_message() );
 	} else {
 		update_post_meta( $logo_id, '_wp_attachment_image_alt', 'Opal Care' );
+		update_post_meta( $logo_id, '_opalcare_default_logo', 1 );
 		update_option( 'site_logo', $logo_id );
 		update_option( 'site_icon', $logo_id );
 	}

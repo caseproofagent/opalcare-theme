@@ -66,3 +66,23 @@ function opalcare_meta_description() {
 	}
 }
 add_action( 'wp_head', 'opalcare_meta_description', 1 );
+
+/**
+ * Draws the animated opal in place of the Site Logo image, but only while the Site Logo is the theme's own default.
+ * If Opal (or anyone) picks a different logo in the editor, that image is shown instead.
+ *
+ * @param string $content The Site Logo block's HTML.
+ * @return string
+ */
+function opalcare_animated_logo( $content ) {
+	$logo_id = (int) get_option( 'site_logo' );
+	if ( ! $logo_id || ! get_post_meta( $logo_id, '_opalcare_default_logo', true ) ) {
+		return $content;
+	}
+	$svg = file_get_contents( get_theme_file_path( 'assets/images/opal-stone-c.svg' ) );
+	if ( false === $svg ) {
+		return $content;
+	}
+	return preg_replace( '/<img\b[^>]*>/', $svg, $content, 1 );
+}
+add_filter( 'render_block_core/site-logo', 'opalcare_animated_logo' );

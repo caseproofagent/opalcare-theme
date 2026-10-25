@@ -1,0 +1,24 @@
+<svg class="opal-stone" viewBox="0 0 100 84" role="img" aria-label="Opal Care" focusable="false">
+<defs>
+ <radialGradient id="os-base" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#9FF0E0"/><stop offset=".55" stop-color="#8FA8F5"/><stop offset="1" stop-color="#6F5FD0"/></radialGradient>
+ <radialGradient id="os-teal"><stop offset="0" stop-color="#27D6C2" stop-opacity=".95"/><stop offset="1" stop-color="#27D6C2" stop-opacity="0"/></radialGradient>
+ <radialGradient id="os-sea"><stop offset="0" stop-color="#4CE08F" stop-opacity=".9"/><stop offset="1" stop-color="#4CE08F" stop-opacity="0"/></radialGradient>
+ <radialGradient id="os-vio"><stop offset="0" stop-color="#9A6BFF" stop-opacity=".95"/><stop offset="1" stop-color="#9A6BFF" stop-opacity="0"/></radialGradient>
+ <radialGradient id="os-rose"><stop offset="0" stop-color="#FF7DBE" stop-opacity=".95"/><stop offset="1" stop-color="#FF7DBE" stop-opacity="0"/></radialGradient>
+ <radialGradient id="os-gold"><stop offset="0" stop-color="#FFC24D" stop-opacity=".95"/><stop offset="1" stop-color="#FFC24D" stop-opacity="0"/></radialGradient>
+ <radialGradient id="os-spec"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+ <radialGradient id="os-halo"><stop offset=".55" stop-color="#FFD58A" stop-opacity=".95"/><stop offset="1" stop-color="#FFD58A" stop-opacity="0"/></radialGradient>
+ <linearGradient id="os-sw" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <clipPath id="os-clip"><ellipse cx="50" cy="42" rx="46" ry="38"/></clipPath>
+</defs>
+<ellipse class="opal-stone__halo" cx="50" cy="42" rx="58" ry="51" fill="url(#os-halo)"/>
+<g clip-path="url(#os-clip)">
+ <ellipse cx="50" cy="42" rx="46" ry="38" fill="url(#os-base)"/>
+ <g class="opal-stone__d1"><circle cx="28" cy="48" r="30" fill="url(#os-teal)"/><circle cx="70" cy="30" r="26" fill="url(#os-vio)"/><circle cx="52" cy="66" r="24" fill="url(#os-rose)"/></g>
+ <g class="opal-stone__d2"><circle cx="64" cy="58" r="26" fill="url(#os-gold)"/><circle cx="34" cy="26" r="24" fill="url(#os-sea)"/><circle cx="78" cy="48" r="18" fill="url(#os-teal)"/></g>
+ <rect class="opal-stone__sweep" x="-60" y="-10" width="36" height="110" fill="url(#os-sw)" transform="skewX(-18)"/>
+ <ellipse cx="31" cy="23" rx="19" ry="11" fill="url(#os-spec)" transform="rotate(-24 31 23)"/>
+ <ellipse cx="25" cy="19" rx="5" ry="2.6" fill="#fff" transform="rotate(-24 25 19)"/>
+</g>
+<ellipse cx="50" cy="42" rx="46" ry="38" fill="none" stroke="#1F2430" stroke-width="3.2"/>
+</svg>
