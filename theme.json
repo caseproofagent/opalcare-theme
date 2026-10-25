@@ -1,0 +1,97 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"layout": { "contentSize": "42rem", "wideSize": "70rem" },
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
+			"palette": [
+				{ "slug": "paper", "name": "Paper", "color": "#F6ECDA" },
+				{ "slug": "paper-2", "name": "Deep paper", "color": "#EADFC3" },
+				{ "slug": "ink", "name": "Ink", "color": "#1F2430" },
+				{ "slug": "accent", "name": "Rust", "color": "#A5522F" },
+				{ "slug": "olive", "name": "Olive", "color": "#7D8766" },
+				{ "slug": "teal", "name": "Teal", "color": "#2F6460" },
+				{ "slug": "muted", "name": "Muted ink", "color": "#5A5448" },
+				{ "slug": "wash", "name": "Wash", "color": "#E9EFEA" }
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"fontFamilies": [
+				{
+					"slug": "serif",
+					"name": "Fraunces",
+					"fontFamily": "Fraunces, Georgia, serif",
+					"fontFace": [
+						{ "fontFamily": "Fraunces", "fontStyle": "normal", "fontWeight": "400 700", "fontDisplay": "swap", "src": [ "file:./assets/fonts/fraunces.woff2" ] },
+						{ "fontFamily": "Fraunces", "fontStyle": "italic", "fontWeight": "400 700", "fontDisplay": "swap", "src": [ "file:./assets/fonts/fraunces-italic.woff2" ] }
+					]
+				},
+				{
+					"slug": "sans",
+					"name": "DM Sans",
+					"fontFamily": "\"DM Sans\", system-ui, sans-serif",
+					"fontFace": [
+						{ "fontFamily": "DM Sans", "fontStyle": "normal", "fontWeight": "400 700", "fontDisplay": "swap", "src": [ "file:./assets/fonts/dm-sans.woff2" ] }
+					]
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small", "name": "Small", "size": "0.9375rem" },
+				{ "slug": "medium", "name": "Body", "size": "1.1875rem" },
+				{ "slug": "large", "name": "Large", "size": "clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem)" },
+				{ "slug": "x-large", "name": "Heading", "size": "clamp(2.25rem, 1.6rem + 2.4vw, 3.5rem)" },
+				{ "slug": "xx-large", "name": "Display", "size": "clamp(3.25rem, 2rem + 5vw, 6rem)" }
+			]
+		},
+		"spacing": {
+			"units": [ "px", "rem", "%", "vw" ],
+			"spacingSizes": [
+				{ "slug": "20", "name": "Small", "size": "0.75rem" },
+				{ "slug": "30", "name": "Medium", "size": "1.5rem" },
+				{ "slug": "40", "name": "Large", "size": "clamp(2rem, 4vw, 3rem)" },
+				{ "slug": "50", "name": "X-large", "size": "clamp(3rem, 6vw, 5rem)" },
+				{ "slug": "60", "name": "Section", "size": "clamp(4rem, 9vw, 7rem)" }
+			]
+		},
+		"custom": { "ruleWidth": "2px" }
+	},
+	"styles": {
+		"color": { "background": "var(--wp--preset--color--paper)", "text": "var(--wp--preset--color--ink)" },
+		"typography": { "fontFamily": "var(--wp--preset--font-family--sans)", "fontSize": "var(--wp--preset--font-size--medium)", "lineHeight": "1.6" },
+		"spacing": { "blockGap": "1.5rem", "padding": { "left": "var(--wp--preset--spacing--30)", "right": "var(--wp--preset--spacing--30)" } },
+		"elements": {
+			"link": {
+				"color": { "text": "var(--wp--preset--color--accent)" },
+				":hover": { "typography": { "textDecoration": "none" } }
+			},
+			"heading": {
+				"typography": { "fontFamily": "var(--wp--preset--font-family--serif)", "fontWeight": "600", "lineHeight": "1.05", "letterSpacing": "-0.02em" }
+			},
+			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--xx-large)", "lineHeight": "1" } },
+			"h2": { "typography": { "fontSize": "var(--wp--preset--font-size--x-large)" } },
+			"h3": { "typography": { "fontSize": "var(--wp--preset--font-size--large)", "lineHeight": "1.2" } },
+			"button": {
+				"color": { "background": "var(--wp--preset--color--accent)", "text": "#ffffff" },
+				"typography": { "fontSize": "1.125rem" },
+				"spacing": { "padding": { "top": "1rem", "bottom": "1rem", "left": "1.75rem", "right": "1.75rem" } }
+			}
+		},
+		"blocks": {
+			"core/site-title": { "typography": { "fontFamily": "var(--wp--preset--font-family--serif)", "fontWeight": "600", "fontSize": "1.75rem", "letterSpacing": "-0.01em" } },
+			"core/navigation": { "typography": { "fontSize": "1.0625rem", "fontWeight": "500" } },
+			"core/post-title": { "typography": { "lineHeight": "1.05" } }
+		}
+	},
+	"customTemplates": [
+		{ "name": "page-landing", "title": "Landing (no title)", "postTypes": [ "page" ] }
+	],
+	"templateParts": [
+		{ "name": "header", "title": "Header", "area": "header" },
+		{ "name": "footer", "title": "Footer", "area": "footer" }
+	]
+}

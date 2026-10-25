@@ -1,0 +1,206 @@
+/*
+Theme Name: Opal Care
+Theme URI: https://opalcarewp.com
+Author: Opal Care
+Author URI: https://myopal.dev
+Description: A simple block theme for opalcarewp.com in Opal's pen-and-watercolor ink-line style. Every colour, font and space is a setting in theme.json, and every word and picture on the home page is a block, so a site owner (or Opal, through Opal Connect) can change it without touching code.
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 8.0
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: opalcare
+Tags: blog, one-column, full-site-editing, block-patterns, custom-colors, editor-style, accessibility-ready, wide-blocks
+*/
+
+/* Paper, ink and hard-edged shadows: the look in a few rules. Colours, fonts and spaces come from theme.json. */
+body {
+	background-color: var(--wp--preset--color--paper);
+	background-image: url("assets/images/paper.webp");
+	background-blend-mode: multiply;
+	background-size: 512px;
+}
+
+.wp-site-blocks > * + * { margin-block-start: 0; }
+
+/* Header */
+.opal-header { padding-block: 1.75rem; }
+.opal-header .wp-block-site-title a { text-decoration: none; }
+.opal-header .wp-block-navigation a { text-decoration: none; }
+.wp-block-navigation .opal-cta > a {
+	background: var(--wp--preset--color--accent);
+	color: #fff;
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 6px;
+	box-shadow: 3px 3px 0 var(--wp--preset--color--ink);
+	padding: 0.55rem 1.1rem;
+	font-weight: 700;
+}
+
+/* Buttons: ink outline, hard shadow */
+.wp-block-button .wp-block-button__link {
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 6px;
+	box-shadow: 5px 5px 0 var(--wp--preset--color--ink);
+	font-weight: 700;
+	text-decoration: none;
+	transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-button .wp-block-button__link:focus-visible {
+	transform: translate(2px, 2px);
+	box-shadow: 3px 3px 0 var(--wp--preset--color--ink);
+}
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-button .wp-block-button__link { transition: none; }
+}
+
+/* Hero */
+.opal-eyebrow {
+	font-size: var(--wp--preset--font-size--small);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: var(--wp--preset--color--accent);
+	margin-block-end: 1.25rem;
+}
+.opal-hero h1 em { font-weight: 400; }
+.opal-plate img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 6px;
+	box-shadow: 12px 12px 0 rgba(31, 36, 48, 0.18);
+}
+.opal-plate figcaption {
+	font-family: var(--wp--preset--font-family--serif);
+	font-style: italic;
+	color: var(--wp--preset--color--muted);
+	margin-top: 1.25rem;
+}
+.opal-link a { color: var(--wp--preset--color--ink); font-weight: 500; }
+
+/* Sections divided by one ink rule */
+.opal-section { border-top: 2px solid var(--wp--preset--color--ink); }
+.opal-step {
+	font-family: var(--wp--preset--font-family--serif);
+	font-weight: 600;
+	font-size: clamp(3.5rem, 6vw, 5.5rem);
+	line-height: 1;
+	color: var(--wp--preset--color--accent);
+	margin-block-end: 0.25rem;
+}
+
+/* The example check: Opal's reply in a phone-chat card */
+.opal-phone {
+	max-width: 24.5rem;
+	margin-inline: auto;
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 2.5rem;
+	padding: 0.75rem;
+	background: #fff;
+	box-shadow: 0 30px 60px -30px rgba(31, 36, 48, 0.35);
+}
+.opal-phone__screen { border-radius: 1.9rem; overflow: hidden; background: var(--wp--preset--color--wash); }
+.opal-phone__top {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 1rem 1.25rem;
+	background: #fff;
+	border-bottom: 1px solid rgba(31, 36, 48, 0.16);
+}
+.opal-phone__top img {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: 46% 22%;
+	border: 1.5px solid var(--wp--preset--color--ink);
+}
+.opal-phone__top p { margin: 0; line-height: 1.25; font-size: 0.8125rem; color: var(--wp--preset--color--muted); }
+.opal-phone__top strong { display: block; font-size: 1rem; color: var(--wp--preset--color--ink); }
+.opal-phone__chat { display: grid; gap: 0.75rem; padding: 1.25rem 1rem 1.5rem; }
+.opal-phone__chat > * { margin: 0; }
+.opal-bubble {
+	max-width: 90%;
+	padding: 0.75rem 1rem;
+	border-radius: 1.1rem;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+.opal-bubble--you {
+	justify-self: end;
+	background: var(--wp--preset--color--teal);
+	color: #fff;
+	border-bottom-right-radius: 0.25rem;
+}
+.opal-bubble--opal {
+	background: #fff;
+	border: 1px solid rgba(31, 36, 48, 0.16);
+	border-bottom-left-radius: 0.25rem;
+}
+.opal-bubble--opal ul { list-style: none; margin: 0.5rem 0 0; padding: 0; display: grid; gap: 0.45rem; font-size: 0.9375rem; line-height: 1.4; }
+.opal-bubble--opal li { padding-inline-start: 1.6rem; position: relative; }
+.opal-bubble--opal li::before {
+	content: "\2713";
+	position: absolute;
+	inset-inline-start: 0;
+	font-weight: 700;
+	color: var(--wp--preset--color--teal);
+}
+.opal-bubble--opal li.is-look::before { content: "!"; color: var(--wp--preset--color--accent); }
+.opal-note { font-family: var(--wp--preset--font-family--serif); font-style: italic; }
+.opal-note small { display: block; font-family: var(--wp--preset--font-family--sans); font-style: normal; color: var(--wp--preset--color--muted); margin-top: 0.4rem; }
+
+/* Questions owners bring her */
+.opal-questions {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border: 2px solid var(--wp--preset--color--ink);
+	border-radius: 6px;
+	background: var(--wp--preset--color--paper-2);
+}
+.opal-questions > p {
+	margin: 0;
+	padding: 2rem 2.25rem;
+	font-family: var(--wp--preset--font-family--serif);
+	font-style: italic;
+	font-size: var(--wp--preset--font-size--large);
+	line-height: 1.3;
+	border-bottom: 2px solid var(--wp--preset--color--ink);
+}
+.opal-questions > p:nth-child(odd) { border-right: 2px solid var(--wp--preset--color--ink); }
+.opal-questions > p:nth-last-child(-n+2) { border-bottom: 0; }
+
+/* Closing band */
+.opal-close { background: var(--wp--preset--color--ink); color: var(--wp--preset--color--paper); }
+.opal-close h2 { color: var(--wp--preset--color--paper); }
+.opal-close .wp-block-button__link { box-shadow: 5px 5px 0 var(--wp--preset--color--olive); border-color: var(--wp--preset--color--paper); }
+
+/* Footer */
+.opal-footer { font-size: var(--wp--preset--font-size--small); color: var(--wp--preset--color--muted); padding-block: 2rem 3rem; }
+.opal-footer a { color: inherit; }
+
+/* Posts */
+.opal-post-card { border-top: 2px solid var(--wp--preset--color--ink); padding-block: 1.75rem; }
+.opal-post-card .wp-block-post-title a { text-decoration: none; }
+.wp-block-post-featured-image img { border: 2px solid var(--wp--preset--color--ink); border-radius: 6px; }
+.wp-block-quote { border-inline-start: 4px solid var(--wp--preset--color--accent); font-family: var(--wp--preset--font-family--serif); font-style: italic; }
+.wp-block-separator { border-color: var(--wp--preset--color--ink); }
+
+/* Keyboard focus is always visible */
+:where(a, button, input, textarea, select, summary):focus-visible {
+	outline: 3px solid var(--wp--preset--color--accent);
+	outline-offset: 3px;
+}
+
+@media (max-width: 781px) {
+	.opal-questions { grid-template-columns: 1fr; }
+	.opal-questions > p:nth-child(odd) { border-right: 0; }
+	.opal-questions > p:nth-last-child(2) { border-bottom: 2px solid var(--wp--preset--color--ink); }
+	.opal-section { padding-block: 3.5rem !important; }
+}
