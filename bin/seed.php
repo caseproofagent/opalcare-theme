@@ -129,4 +129,15 @@ if ( $existing_nav ) {
 	wp_insert_post( $nav_args );
 }
 
+// The site icon: Opal's avatar, imported once from the theme, so browsers do not ask for a favicon that is not there.
+if ( ! get_option( 'site_icon' ) ) {
+	require_once ABSPATH . 'wp-admin/includes/media.php';
+	require_once ABSPATH . 'wp-admin/includes/file.php';
+	require_once ABSPATH . 'wp-admin/includes/image.php';
+	$icon_id = media_sideload_image( get_theme_file_uri( 'assets/images/site-icon.jpg' ), 0, 'Opal Care', 'id' );
+	if ( ! is_wp_error( $icon_id ) ) {
+		update_option( 'site_icon', $icon_id );
+	}
+}
+
 WP_CLI::success( 'Opal Care starter content is in place. Home page ID ' . $home_id );
