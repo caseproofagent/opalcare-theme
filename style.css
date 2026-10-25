@@ -7,7 +7,7 @@ Description: A simple block theme for opalcarewp.com in Opal's pen-and-watercolo
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.0
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: opal-care
@@ -231,3 +231,7 @@ body {
 /* The search box matches the paper cards */
 .wp-block-search__input { background: var(--wp--preset--color--paper-2); border: 2px solid var(--wp--preset--color--ink); border-radius: 6px; padding: 0.7rem 1rem; font: inherit; color: var(--wp--preset--color--ink); }
 .wp-block-search__button { background: var(--wp--preset--color--ink); color: var(--wp--preset--color--paper); border: 2px solid var(--wp--preset--color--ink); border-radius: 6px; padding: 0.7rem 1.25rem; font: inherit; font-weight: 700; }
+
+/* The footer's social icon keeps a 44px tap target */
+.opal-footer .wp-block-social-links { margin: 0; }
+.opal-footer .wp-social-link a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0; }
