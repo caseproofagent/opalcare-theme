@@ -94,3 +94,6 @@ function opalcare_register_blocks() {
 	register_block_type( get_theme_file_path( 'blocks/readiness-check' ) );
 }
 add_action( 'init', 'opalcare_register_blocks' );
+
+require get_theme_file_path( 'inc/agent-surfaces.php' );
+require get_theme_file_path( 'inc/security-headers.php' );
