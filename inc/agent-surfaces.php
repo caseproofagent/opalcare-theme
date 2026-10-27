@@ -115,14 +115,14 @@ function opalcare_markdown_page() {
  */
 function opalcare_serve_markdown() {
 	$page = opalcare_markdown_page();
-	if ( ! $page || post_password_required( $page ) ) {
+	if ( ! $page || ! is_post_publicly_viewable( $page ) || post_password_required( $page ) ) {
 		return;
 	}
 	$body = opalcare_page_markdown( $page );
 	status_header( 200 );
 	header( 'Content-Type: text/markdown; charset=utf-8' );
 	header( 'Vary: Accept' );
-	header( 'Cache-Control: public, max-age=300' );
+	header( 'Cache-Control: ' . ( is_user_logged_in() ? 'private, no-store' : 'public, max-age=300' ) );
 	header( 'Link: <' . get_permalink( $page ) . '>; rel="canonical"' );
 	header( 'X-Robots-Tag: noindex' );
 	echo $body; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- plain text, not HTML.
@@ -149,7 +149,7 @@ add_action( 'wp_head', 'opalcare_markdown_link', 2 );
  * @return string
  */
 function opalcare_page_markdown( $page ) {
-	$html = do_blocks( $page->post_content );
+	$html = apply_filters( 'the_content', $page->post_content );
 	$html = preg_replace( '#<(script|style|form|noscript)\b.*?</\1>#is', '', $html );
 	$doc  = new DOMDocument();
 	libxml_use_internal_errors( true );
@@ -247,3 +247,13 @@ function opalcare_md_node( $n ) {
 			return opalcare_md_children( $n );
 	}
 }
+
+/**
+ * The page and its markdown copy share an address, so tell caches the answer depends on Accept.
+ */
+function opalcare_vary_accept() {
+	if ( is_singular() || is_front_page() ) {
+		header( 'Vary: Accept', false );
+	}
+}
+add_action( 'send_headers', 'opalcare_vary_accept' );
