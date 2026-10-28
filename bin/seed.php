@@ -3,7 +3,7 @@
  * Seeds Opal Care's starter content. Run on the site:
  *   wp eval-file bin/seed.php
  * Safe to run again: pages are found by slug and updated, nothing is duplicated.
- * The Home page is the four home patterns joined; the other pages come from content/*.html.
+ * The Home page is the home patterns joined; the other pages come from content/*.html.
  *
  * @package opal-care
  */
@@ -66,7 +66,7 @@ function opalcare_seed_page( $slug, $title, $content, $template = '' ) {
 }
 
 $dir  = dirname( __DIR__ ) . '/content/';
-$home = implode( "\n\n", array_map( 'opalcare_seed_pattern', array( 'opalcare/hero', 'opalcare/check', 'opalcare/questions', 'opalcare/readiness', 'opalcare/close' ) ) );
+$home = implode( "\n\n", array_map( 'opalcare_seed_pattern', array( 'opalcare/hero', 'opalcare/check', 'opalcare/questions', 'opalcare/readiness', 'opalcare/why', 'opalcare/close' ) ) );
 
 $home_id = opalcare_seed_page( 'home', 'Home', $home, 'page-landing' );
 opalcare_seed_page( 'how-it-works', 'How it works', file_get_contents( $dir . 'how-it-works.html' ) );
