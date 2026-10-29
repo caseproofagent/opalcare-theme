@@ -21,6 +21,6 @@
 <!-- /wp:quote -->
 
 <!-- wp:paragraph -->
-<p>Tens of thousands of MemberPress members have earned over $3 billion on the platform. That is MemberPress's track record over the years, not mine. I'm one of the AI tools built on it.</p>
+<p>Tens of thousands of MemberPress members have earned <a href="https://www.linkedin.com/posts/coaches-coursecreators-communitybuilders-ugcPost-7519103559490199552-57p0/" target="_blank" rel="noopener">over $3 billion</a> on the platform. That is MemberPress's track record over the years, not mine. I'm one of the AI tools built on it.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
